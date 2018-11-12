@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 struct PlayingCardDeck
@@ -42,3 +43,22 @@ extension Int{
         }
     }
 }
+
+
+extension CGFloat{
+    
+    var arc4random: CGFloat {
+          return self * (CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max))
+    }
+    
+}
+//    var arc4random : CGFloat{
+//        if self > 0{
+//            return CGFloat(arc4random_uniform(UInt32(self)))
+//        }else if self < 0{
+//            return -CGFloat(arc4random_uniform(UInt32(abs(self))))
+//        }else{
+//            return 0
+//        }
+//    }
+//}
